@@ -1,0 +1,36 @@
+﻿@model PriceQuotation.Models.PriceQuotationModel
+@{
+    ViewData["Title"] = "Price Quote Calculator";
+    Layout = "_Layout";
+}
+
+<h1> Price Quote Calculator</h1>
+
+<form asp-action="Index" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <label asp-for="Subtotal">Subtotal</label>
+        <input asp-for="Subtotal" />
+        <span asp-validation-for="Subtotal" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="DiscountRate">Discount Rate (%)</label>
+        <input asp-for="DiscountRate" />
+        <span asp-validation-for="DiscountRate" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Discount Amount</label>
+        <input value="@Model.DiscountAmount?.ToString("C2")" readonly />
+    </div>
+
+    <div>
+        <label>Total</label>
+        <input value="@Model.Total?.ToString("C2")" readonly />
+    </div>
+
+    <button type="submit">Calculate</button>
+    <a asp-action="Index">Clear</a>
+</form>
