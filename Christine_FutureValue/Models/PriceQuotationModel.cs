@@ -5,11 +5,11 @@ namespace PriceQuotation.Models
     public class PriceQuotationModel
     {
         [Required(ErrorMessage = "Please enter a Subtotal.")]
-        [Range(1, 500, ErrorMessage = "Please enter a subtotal between 1 and 500.")]
+        [Range(1, 500, ErrorMessage = "Subtotal must be a positive number greater than 0")]
         public decimal? Subtotal { get; set; }
 
         [Required(ErrorMessage = "Please enter a discount rate.")]
-        [Range(0.1, 10, ErrorMessage = "Discount rate must be between 0.1 and 10.0.")]
+        [Range(1, 100, ErrorMessage = "Discount Percent must be a number between 0 and 100.")]
         public decimal? DiscountRate { get; set; }
 
         // Calculated Discount Amount

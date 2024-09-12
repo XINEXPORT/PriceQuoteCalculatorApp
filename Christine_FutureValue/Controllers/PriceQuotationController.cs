@@ -21,5 +21,4 @@ namespace PriceQuotation.Controllers
 
             return View(model);
         }
-    }
-}
+    }}
