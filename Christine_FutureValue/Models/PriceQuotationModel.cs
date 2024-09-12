@@ -21,7 +21,7 @@ namespace PriceQuotation.Models
                 {
                     return Subtotal * (DiscountRate / 100);
                 }
-                return null;
+                return 0;
             }
         }
 
@@ -34,7 +34,7 @@ namespace PriceQuotation.Models
                 {
                     return Subtotal - DiscountAmount;
                 }
-                return null;
+                return 0;
             }
         }
 
@@ -46,7 +46,7 @@ namespace PriceQuotation.Models
                 var discountAmount = Subtotal * (DiscountRate / 100);
                 return Subtotal - discountAmount;
             }
-            return null; 
+            return 0; 
         }
     }
 }

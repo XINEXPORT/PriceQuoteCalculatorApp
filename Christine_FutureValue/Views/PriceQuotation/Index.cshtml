@@ -23,12 +23,12 @@
 
     <div>
         <label>Discount Amount</label>
-        <input value="@Model.DiscountAmount?.ToString("C2")" readonly />
+        <input value="@Model.DiscountAmount?.ToString("C2")  "$0.00"" readonly />
     </div>
 
     <div>
         <label>Total</label>
-        <input value="@Model.Total?.ToString("C2")" readonly />
+        <input value="@Model.Total?.ToString("C2") "$0.00"" readonly />
     </div>
 
     <button type="submit">Calculate</button>
