@@ -8,7 +8,7 @@ namespace PriceQuotation.Models
         [Range(1, 500, ErrorMessage = "Subtotal must be a positive number greater than 0")]
         public decimal? Subtotal { get; set; }
 
-        [Required(ErrorMessage = "Please enter a discount rate.")]
+        [Required(ErrorMessage = "Please enter a Discount Rate.")]
         [Range(1, 100, ErrorMessage = "Discount Percent must be a number between 0 and 100.")]
         public decimal? DiscountRate { get; set; }
 
